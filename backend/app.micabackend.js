@@ -46,7 +46,6 @@ var threepc = "config_img/3pc.png";
 var fourpc = "config_img/4pc.png";
 //clamping
 var clamp = "config_img/C.png";
-var flange = "config_img/F.png";
 
 function Draw() {
     var canvas = document.getElementById('myCanvas');
@@ -84,12 +83,61 @@ function Draw() {
     var lock = document.getElementById("Lockup");
     var selLock = lock.options[lock.selectedIndex].value;
     var lockupImg = new Image();
-    if (selLock == "C") {
-        lockupImg.src = "";
-        lockupImg.onload = function() { context.drawImage(this, 0, 0); }
-        lockupImg.src = clamp;
-        context.rotate(5);
-    }
+    var lockupImg2 = new Image();
+    var lockupImg3 = new Image();
+    var lockupImg4 = new Image();
+    lockupImg.src = "";
+    seg = document.getElementById("Segments").value;
+    sep = 360/seg;
+    lockupImg.src = clamp; lockupImg2.src = clamp; lockupImg3.src = clamp, lockupImg4.src = clamp;
+    lockupImg.onload = function() { context.drawImage(lockupImg, 0, 0); }
+    if (seg == 2) {
+        lockupImg2.onload = function() { 
+            context.save();
+            context.translate(338, 338);
+            context.rotate(180 * Math.PI / 180);
+            context.translate(-338,-338);
+            context.drawImage(lockupImg2, 0, 0);
+            context.restore(); } }
+    if (seg == 3) {
+        lockupImg2.onload = function() { 
+            context.save();
+            context.translate(338, 338);
+            context.rotate(120 * Math.PI / 180);
+            context.translate(-338,-338);
+            context.drawImage(lockupImg2, 0, 0);
+            context.restore(); }
+        lockupImg3.onload = function() { 
+            context.save();
+            context.translate(338, 338);
+            context.rotate(240 * Math.PI / 180);
+            context.translate(-338,-338);
+            context.drawImage(lockupImg3, 0, 0);
+            context.restore(); } }
+    if (seg == 4) {
+        lockupImg2.onload = function() { 
+            context.save();
+            context.translate(338, 338);
+            context.rotate(90 * Math.PI / 180);
+            context.translate(-338,-338);
+            context.drawImage(lockupImg2, 0, 0);
+            context.restore(); }
+        lockupImg3.onload = function() { 
+            context.save();
+            context.translate(338, 338);
+            context.rotate(180 * Math.PI / 180);
+            context.translate(-338,-338);
+            context.drawImage(lockupImg3, 0, 0);
+            context.restore(); }
+        lockupImg4.onload = function() { 
+            context.save();
+            context.translate(338, 338);
+            context.rotate(270 * Math.PI / 180);
+            context.translate(-338,-338);
+            context.drawImage(lockupImg4, 0, 0);
+            context.restore(); } }
+                
+        
     if (selLock == "F") {
         lockupImg.src = "";
         lockupImg.onload = function() { context.drawImage(this, 0, 0); }

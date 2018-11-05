@@ -470,24 +470,29 @@ body { background-color: #B9C2C9; margin: 0px; padding: 0px; font-family: 'Lato'
     width: 150px;
     height: 28px;
     padding: 5px;
+    margin-left: 10px;
 }
 .txtinput_short {
-    width: 73.5px;
+    width: 68px;
     height: 28px;
     padding: 5px;
+    margin-left: 10px;
 }
 .selector {
     width: 150px;
     height: 28px;
     padding: 5px;
+    margin-left: 10px;
 }
 .selector_short {
     width: 74px;
     height: 28px;
     padding: 5px;
+    margin-left: 10px;
 }
 .btnWide {
     width: 150px;
     height: 28px;
+    margin-left: 10px;
 }
 

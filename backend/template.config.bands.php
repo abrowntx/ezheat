@@ -5,7 +5,7 @@
     <div style="display:grid;grid-template-columns:1fr 750px 200px 200px 1fr;grid-template-areas:'. d1 d2 d3 .';">
         <div style="grid-area: d1;margin:0 auto;">
         <div style="font-size:28px;font-weight:bold;margin:0 auto;width:400px;">Mica Band Heater Configurator</div>
-            <canvas id="myCanvas" width="680px" height="680px" style="">
+            <canvas id="myCanvas" width="676px" height="676px" style="">
             Your browser does not support the HTML5 canvas tag.</canvas>
         </div>
         <div style="grid-area: d2">
