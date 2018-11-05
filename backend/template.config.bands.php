@@ -1,9 +1,11 @@
 
 
 <div class="ContentWrapper2" style="width:100%;margin:0 auto;">
-    <div style="display:grid;grid-template-columns:1fr 830px 200px 200px 1fr;grid-template-areas:'. d1 d2 d3 .';">
-        <div style="grid-area: d1">
-            <canvas id="myCanvas" width="800" height="600" style="border:1px solid #d3d3d3;background:white;">
+    
+    <div style="display:grid;grid-template-columns:1fr 750px 200px 200px 1fr;grid-template-areas:'. d1 d2 d3 .';">
+        <div style="grid-area: d1;margin:0 auto;">
+        <div style="font-size:28px;font-weight:bold;margin:0 auto;width:400px;">Mica Band Heater Configurator</div>
+            <canvas id="myCanvas" width="680px" height="680px" style="">
             Your browser does not support the HTML5 canvas tag.</canvas>
         </div>
         <div style="grid-area: d2">
@@ -57,25 +59,25 @@
                 </select>
             </form>
             <form action="">
-                <input type="button" class="btnWide" value="Configure" onclick="BaseSpec()"><br>
-                <input type="button" class="btnWide" value="Clear Form">
+                <input type="button" class="btnWide" value="Configure" onclick="BaseSpec(); Draw();"><br>
+                <input type="button" class="btnWide" value="Clear Form" onlcick="Clear();">
             </form>
         </div>
         <div style="grid-area: d3">
             <span style="font-weight:bold">Holes:</span><br>
             <form action="">
-                <input id="h1" type="text" placeholder="Hole 1 Size" onfocusout="DecimalFormat(2,this.id,this.value,this.placeholder)"><br>
-                <input id="h1d" type="text" placeholder="Hole 1 Degree" onfocusout="DecimalFormat(0,this.id,this.value,this.placeholder)"><br>
-                <input id="h2" type="text" placeholder="Hole 2 Size" onfocusout="DecimalFormat(2,this.id,this.value,this.placeholder)"><br>
-                <input id="h2d" type="text" placeholder="Hole 2 Degree" onfocusout="DecimalFormat(0,this.id,this.value,this.placeholder)"><br>
-                <input id="h3" type="text" placeholder="Hole 3 Size" onfocusout="DecimalFormat(2,this.id,this.value,this.placeholder)"><br>
-                <input id="h3d" type="text" placeholder="Hole 3 Degree" onfocusout="DecimalFormat(0,this.id,this.value,this.placeholder)"><br>
-                <input id="h4" type="text" placeholder="Hole 4 Size" onfocusout="DecimalFormat(2,this.id,this.value,this.placeholder)"><br>
-                <input id="h4d" type="text" placeholder="Hole 4 Degree" onfocusout="DecimalFormat(0,this.id,this.value,this.placeholder)"><br>
+                <input id="h1" type="text" class="txtinput" placeholder="Hole 1 Size" onfocusout="DecimalFormat(2,this.id,this.value,this.placeholder)"><br>
+                <input id="h1d" type="text" class="txtinput" placeholder="Hole 1 Degree" onfocusout="DecimalFormat(0,this.id,this.value,this.placeholder)"><br>
+                <input id="h2" type="text" class="txtinput" placeholder="Hole 2 Size" onfocusout="DecimalFormat(2,this.id,this.value,this.placeholder)"><br>
+                <input id="h2d" type="text" class="txtinput" placeholder="Hole 2 Degree" onfocusout="DecimalFormat(0,this.id,this.value,this.placeholder)"><br>
+                <input id="h3" type="text" class="txtinput" placeholder="Hole 3 Size" onfocusout="DecimalFormat(2,this.id,this.value,this.placeholder)"><br>
+                <input id="h3d" type="text" class="txtinput" placeholder="Hole 3 Degree" onfocusout="DecimalFormat(0,this.id,this.value,this.placeholder)"><br>
+                <input id="h4" type="text" class="txtinput" placeholder="Hole 4 Size" onfocusout="DecimalFormat(2,this.id,this.value,this.placeholder)"><br>
+                <input id="h4d" type="text" class="txtinput" placeholder="Hole 4 Degree" onfocusout="DecimalFormat(0,this.id,this.value,this.placeholder)"><br>
             </form>
         </div>
     </div>
-    <div style="display:grid;grid-template-columns:1fr 250px 250px 250px 250px 1fr;grid-template-areas:'. g1 g2 g3 g4 .';">
+    <div style="display:grid;grid-template-columns:1fr 250px 250px 250px 250px 1fr;grid-template-areas:'. g1 g2 g3 g4 .';color:#8C9EAC;">
         <div style="grid-area:g1">
             <br>
             <span style="font-weight:bold">Surface Area: </span><span id="surfArea"></span><br>

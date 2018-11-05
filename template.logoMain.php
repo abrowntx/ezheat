@@ -21,10 +21,10 @@
     <div class="headerDivider"></div>
 
     <div class="headerNav">
-        <a>Home</a>&nbsp;&nbsp;&nbsp;•&nbsp;&nbsp;&nbsp;
+        <a href="index.php">Home</a>&nbsp;&nbsp;&nbsp;•&nbsp;&nbsp;&nbsp;
         <a>Our Products</a>&nbsp;&nbsp;&nbsp;•&nbsp;&nbsp;&nbsp;
         <a>Industries</a>&nbsp;&nbsp;&nbsp;•&nbsp;&nbsp;&nbsp;
-        <a>Configurators</a>&nbsp;&nbsp;&nbsp;•&nbsp;&nbsp;&nbsp;
+        <a href="configurators.php">Configurators</a>&nbsp;&nbsp;&nbsp;•&nbsp;&nbsp;&nbsp;
         <a>Custom Quoting</a>&nbsp;&nbsp;&nbsp;•&nbsp;&nbsp;&nbsp;
         <a>About Us</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     </div>

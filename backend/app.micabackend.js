@@ -38,10 +38,68 @@ function BaseSpec(){
     document.getElementById("amps").innerHTML = Wat / Vol;
 }
 
-document.addEventListener('DOMContentLoaded',domloaded,false);
-    function domloaded(){    var c = document.getElementById("myCanvas");
-    var ctx = c.getContext("2d");
-    ctx.beginPath();
-    ctx.arc(125, 75, 50, 0, 2 * Math.PI);
-    ctx.stroke();  // your code here.
+//SET THE VARIABLES FOR IMG URL STRINGS FOR DRAWING THE HEATERS!
+//heater body
+var onepc = "config_img/1pc.png";
+var twopc = "config_img/2pc.png";
+var threepc = "config_img/3pc.png";
+var fourpc = "config_img/4pc.png";
+//clamping
+var clamp = "config_img/C.png";
+var flange = "config_img/F.png";
+
+function Draw() {
+    var canvas = document.getElementById('myCanvas');
+    var context = canvas.getContext('2d');
+
+    //draw initial heater body
+    var seg = document.getElementById("Segments");
+    var selSeg = seg.options[seg.selectedIndex].value;
+    if (selSeg == 1) {
+        context.clearRect(0, 0, canvas.width, canvas.height);
+        var htrBody = new Image();
+        htrBody.onload = function() { context.drawImage(this, 0, 0); }
+        htrBody.src = onepc;
+    }
+    if (selSeg == 2) {
+        context.clearRect(0, 0, canvas.width, canvas.height);
+        var htrBody = new Image();
+        htrBody.onload = function() { context.drawImage(this, 0, 0); }
+        htrBody.src = twopc;
+    }
+    if (selSeg == 3) {
+        context.clearRect(0, 0, canvas.width, canvas.height);
+        var htrBody = new Image();
+        htrBody.onload = function() { context.drawImage(this, 0, 0); }
+        htrBody.src = threepc;
+    }
+    if (selSeg == 4) {
+        context.clearRect(0, 0, canvas.width, canvas.height);
+        var htrBody = new Image();
+        htrBody.onload = function() { context.drawImage(this, 0, 0); }
+        htrBody.src = fourpc;
+    }
+
+    //draw clamping mechanisms
+    var lock = document.getElementById("Lockup");
+    var selLock = lock.options[lock.selectedIndex].value;
+    var lockupImg = new Image();
+    if (selLock == "C") {
+        lockupImg.src = "";
+        lockupImg.onload = function() { context.drawImage(this, 0, 0); }
+        lockupImg.src = clamp;
+        context.rotate(5);
+    }
+    if (selLock == "F") {
+        lockupImg.src = "";
+        lockupImg.onload = function() { context.drawImage(this, 0, 0); }
+        lockupImg.src = flange;
+    }
+
+}
+
+
+
+function Clear() {
+    context.clearRect(0, 0, canvas.width, canvas.height);
 }
