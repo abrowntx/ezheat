@@ -432,3 +432,54 @@ body { background-color: #657DA1; margin: 0px; padding: 0px; font-family: 'Lato'
     width: 450px;
     height: 28px;
 }
+
+/*[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]*/
+/*              GENERAL CONTENT SECTION!                          */
+/*[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]*/
+
+.ContentWrapper {
+    position: relative;
+    padding-top: 175px;
+    display: grid;
+    grid-template-columns: 1fr 220px 220px 220px 220px 1fr;
+    grid-template-areas: '. cont1 cont2 cont3 cont4 .';
+}
+.ContentWrapper2 {
+    position: relative;
+    padding-top: 175px;
+}
+.cont1 {
+    grid-area: cont1;
+}
+.cont2 {
+    grid-area: cont2;
+}
+.cont3 {
+    grid-area: cont3;
+}
+.cont4 {
+    grid-area: cont4;
+}
+
+
+/*[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]*/
+/*              GENERAL FORM SETTINGS  !                          */
+/*[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]*/
+
+.txtinput {
+    width: 150px;
+    height: 24px;
+}
+.txtinput_short {
+    width: 73.5px;
+    height: 24px;
+}
+.selector {
+    width: 150px;
+    height: 24px;
+}
+.selector_short {
+    width: 74px;
+    height: 24px;
+}
+
